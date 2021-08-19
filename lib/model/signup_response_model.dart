@@ -23,7 +23,7 @@ class SignUpResponseModel {
 
   factory SignUpResponseModel.fromJson(Map<String, dynamic> json) =>
       SignUpResponseModel(
-        staus: json["staus"],
+        staus: json["staus"] ,
         message: json["message"],
         data: Data.fromJson(json["data"]),
       );
@@ -84,10 +84,10 @@ class Data {
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
-        name: json["name"],
-        email: json["email"],
-        mno: json["mno"],
-        ps: json["ps"],
+        name: json["name"] as String,
+        email: json["email"] as dynamic,
+        mno: json["mno"]as dynamic,
+        ps: json["ps"]as dynamic,
         gender: json["gender"],
         currentAddress: json["current_address"],
         pLocaion: json["p_locaion"],
